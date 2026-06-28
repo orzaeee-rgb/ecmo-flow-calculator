@@ -59,22 +59,42 @@ function calculateECMO() {
  
 function exportExcel() {
 
-    let table = document.querySelector("table");
+    const height = document.getElementById("height").value;
+    const weight = document.getElementById("weight").value;
+    const bsa = calculateBSA(height, weight);
 
-        if(!table){
-        alert("กรุณาคำนวณก่อน");
-        return;
+    const data = [
+        ["ECMO Flow Calculator"],
+        [],
+        ["Height (cm)", height],
+        ["Weight (kg)", weight],
+        ["BSA (m²)", bsa.toFixed(2)],
+        [],
+        ["% Flow","CI 2.4","CI 2.6","CI 2.8"]
+    ];
+
+    const cardiacIndexes = [2.4,2.6,2.8];
+
+    for(let percent=10; percent<=100; percent+=10){
+
+        let row = [percent + "%"];
+
+        cardiacIndexes.forEach(function(ci){
+            row.push(calculateFlow(bsa,ci,percent).toFixed(2));
+        });
+
+        data.push(row);
     }
 
-    let workbook = XLSX.utils.table_to_book(table);
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
 
-    XLSX.writeFile(
-        workbook,
-        "ECMO_Flow_Calculator.xlsx"
-    );
+    const workbook = XLSX.utils.book_new();
 
-    alert("Export Excel สำเร็จ");
-}   //
+    XLSX.utils.book_append_sheet(workbook, worksheet, "ECMO");
+
+    XLSX.writeFile(workbook,"ECMO_Flow_Calculator.xlsx");
+
+} //
 
 document.getElementById("btnCalculate")
     .addEventListener("click", calculateECMO);
