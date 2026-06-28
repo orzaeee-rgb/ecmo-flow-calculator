@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMO Flow Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+
+<h1>🫀 ECMO Flow Calculator</h1>
+
+<p>
+Body Surface Area (BSA) × Cardiac Index
+</p>
+
+<p>Cardiac Index</p>
+
+<p>Height (cm)</p>
+<input type="number" id="height">
+
+<p>Weight (kg)</p>
+<input type="number" id="weight">
+
+<br><br>
+
+<button id="btnCalculate">Calculate</button>
+
+<div id="result"></div>
+
+<button id="btnExport">
+    Export Excel
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("./service-worker.js");
+}
+</script>
+
+</body>
+</html>
