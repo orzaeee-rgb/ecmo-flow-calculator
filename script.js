@@ -61,7 +61,13 @@ function exportExcel() {
 
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
-    const bsa = calculateBSA(height, weight);
+
+    if (!height || !weight) {
+        alert("กรุณากรอกข้อมูลให้ถูกต้อง");
+        return;
+    }
+
+    const bsa = calculateBSA(Number(height), Number(weight));
 
     const data = [
         ["ECMO Flow Calculator"],
