@@ -10,38 +10,29 @@
 </head>
 <body>
 
-<h1>🫀 ECMO Flow Calculator</h1>
+<div class="container">
 
-<p>
-Body Surface Area (BSA) × Cardiac Index (CI) = Ecmo flow (L/min)
-</p>
+    <h1>🫀 ECMO Flow Calculator</h1>
 
-<p>Height (cm)</p>
-<input type="number" id="height">
+    <p>Body Surface Area (BSA) × Cardiac Index</p>
 
-<p>Weight (kg)</p>
-<input type="number" id="weight">
+    <label>Height (cm)</label>
+    <input type="number" id="height">
 
-<br><br>
+    <label>Weight (kg)</label>
+    <input type="number" id="weight">
 
-<button id="btnCalculate">Calculate</button>
+    <button id="btnCalculate">
+        Calculate
+    </button>
 
-<div id="result"></div>
+    <div id="result"></div>
 
-<button id="btnExport">
-    Export Excel
-</button>
+    <button id="btnExport">
+        Export Excel
+    </button>
 
-<script src="xlsx.full.min.js"></script>
-
-<script src="script.js"></script>
-
-<script>
-
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register("./service-worker.js");
-}
-</script>
+</div>
 
 </body>
 </html>
