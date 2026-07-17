@@ -1,4 +1,4 @@
-const CACHE_NAME = "ecmo-cache-v2";
+const CACHE_NAME = "ecmo-cache-v3";
 
 const urlsToCache = [
     "./",
@@ -6,7 +6,6 @@ const urlsToCache = [
     "./style.css",
     "./script.js",
     "./manifest.json",
-    "./xlsx.full.min.js"
 ];
 
 self.addEventListener("install", event => {
