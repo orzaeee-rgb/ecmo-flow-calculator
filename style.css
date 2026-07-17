@@ -215,11 +215,18 @@ button:hover{
   background: #e5f0ff;
 }
 
-/* คอลัมน์เปอร์เซ็นต์ */
-.result-table th:first-child,
-.result-table td:first-child {
+/* หัวตารางทุกคอลัมน์ */
+.result-table th {
+  background: #0d6efd;
+  color: white;
   font-weight: 700;
+}
+
+/* เฉพาะข้อมูลคอลัมน์ % Flow */
+.result-table td:first-child {
   background: #eef5ff;
+  color: #111827;
+  font-weight: 700;
 }
 
 /* หัวข้อผลลัพธ์ */
