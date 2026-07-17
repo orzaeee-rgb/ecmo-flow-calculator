@@ -117,4 +117,52 @@ button:hover{
 
 }
 
+@media print{
+    button{
+    display:none;
+    }
+
+}
+
+@media print{
+    input{
+    display:none;
+    }
+    
+    label{
+    display:none;
+    }
+
+    button{
+    display:none;
+    }
+
+}
+
+@media print{
+    body{
+    background:white;
+    }
+
+    button{
+    display:none;
+    }
+
+    input{
+    display:none;
+    }
+    
+    label{
+    display:none;
+    }
+
+    button{
+    display:none;
+    }
+
+    h1{
+    display:none;
+    }
+}
+
 }

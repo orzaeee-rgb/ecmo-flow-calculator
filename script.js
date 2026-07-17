@@ -21,8 +21,10 @@ function calculateECMO() {
 
     const cardiacIndexes = [2.4, 2.6, 2.8];
 
-    let result = "<h2>Result</h2>";
-    result += "<p>BSA = " + bsa.toFixed(2) + " m²</p>";
+    let result = "<h2>ECMO Flow Calculator</h2>";
+        result += "<p><b>Height :</b> " + height + " cm</p>";
+        result += "<p><b>Weight :</b> " + weight + " kg</p>";
+        result += "<p><b>BSA :</b> " + bsa.toFixed(2) + " m²</p>";
 
     result += `
     <table class="result-table">
@@ -107,3 +109,6 @@ document.getElementById("btnCalculate")
 
 document.getElementById("btnExport")
     .addEventListener("click", exportExcel);
+
+document.getElementById("btnPrint")
+    .addEventListener("click", printResult);
