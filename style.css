@@ -116,6 +116,7 @@ button:hover{
     padding:20px;
 
 }
+}
 
 @media print {
   body * {
@@ -132,10 +133,8 @@ button:hover{
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-
     margin: 0 !important;
     padding: 0 !important;
-
     background: white !important;
     box-shadow: none !important;
     border: none !important;
@@ -170,9 +169,7 @@ button:hover{
   }
 
   @page {
-    size: A5 portrait;
-    margin: 8mm;
+    size: A4 portrait;
+    margin: 10mm;
   }
-}
-
 }
