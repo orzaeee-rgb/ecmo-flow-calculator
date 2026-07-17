@@ -102,7 +102,11 @@ function exportExcel() {
 
     XLSX.writeFile(workbook,"ECMO_Flow_Calculator.xlsx");
 
-} //
+} 
+
+function printResult() {
+    window.print();
+} 
 
 document.getElementById("btnCalculate")
     .addEventListener("click", calculateECMO);
