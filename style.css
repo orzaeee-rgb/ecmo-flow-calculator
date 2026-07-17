@@ -178,7 +178,7 @@ button:hover{
   display: inline-block !important;
   width: 32% !important;
 
-  margin: 0 0.4% 3mm 0 !important;
+  margin: 12mm 0.4% 3mm 0 !important;
   padding: 0 !important;
 
   background: transparent !important;
@@ -187,7 +187,8 @@ button:hover{
   box-shadow: none !important;
 
   color: #111827 !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
   line-height: 1.4 !important;
   text-align: center !important;
   box-sizing: border-box !important;
@@ -201,7 +202,7 @@ button:hover{
     border-collapse: collapse !important;
     table-layout: fixed !important;
 
-    font-size: 16px !important;
+    font-size: 18px !important;
 
     break-inside: avoid !important;
     page-break-inside: avoid !important;
@@ -265,7 +266,7 @@ button:hover{
 
 @media (max-width: 600px) {
   .result-table {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 
   .result-table th,
@@ -274,6 +275,6 @@ button:hover{
   }
 
   #result p {
-    font-size: 14px !important;
+    font-size: 18px !important;
   }
 }
