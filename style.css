@@ -178,7 +178,7 @@ button:hover{
   display: inline-block !important;
   width: 32% !important;
 
-  margin: 12mm 0.4% 3mm 0 !important;
+  margin: 8mm 0.4% 3mm 0 !important;
   padding: 0 !important;
 
   background: transparent !important;
@@ -188,7 +188,6 @@ button:hover{
 
   color: #111827 !important;
   font-size: 18px !important;
-  font-weight: bold !important;
   line-height: 1.4 !important;
   text-align: center !important;
   box-sizing: border-box !important;
@@ -260,7 +259,7 @@ button:hover{
 
   @page {
     size: A4 landscape;
-    margin: 6mm 8mm;
+    margin: 8mm 4mm;
   }
 }
 
