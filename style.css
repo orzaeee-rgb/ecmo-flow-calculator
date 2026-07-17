@@ -119,21 +119,105 @@ button:hover{
 }
 
 @media print {
-
   body * {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 
   #result,
   #result * {
-    visibility: visible;
+    visibility: visible !important;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  #result {
+    position: static !important;
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 170mm !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  #result h2 {
+    margin: 0 0 8px !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  #result p {
+    margin: 2px 0 !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .result-table {
+    width: 100% !important;
+    margin: 10px 0 0 !important;
+
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+
+    font-size: 11px !important;
+
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .result-table th,
+  .result-table td {
+    padding: 5px 4px !important;
+    border: 1px solid #cbd5e1 !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+  }
+
+  .result-table th {
+    background: #0d6efd !important;
+    color: white !important;
+    font-weight: 700 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .result-table tbody tr:nth-child(even) {
+    background: #f3f7fc !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .result-table td:first-child {
+    background: #eef5ff !important;
+    font-weight: 700 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .result-table tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   @page {
-    size: A4 Landscape;
-    margin: 10mm;
+    size: A4 portrait;
+    margin: 8mm;
   }
-
 }
 
 /* ตารางผลลัพธ์ ECMO */
