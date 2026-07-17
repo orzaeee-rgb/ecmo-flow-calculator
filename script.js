@@ -59,14 +59,19 @@ function calculateECMO() {
 }
  
 function printResult() {
-    const result = document.getElementById("result");
 
-    if (!result.innerHTML.trim()) {
-        alert("กรุณาคำนวณก่อนพิมพ์");
+    const height = document.getElementById("height").value;
+    const weight = document.getElementById("weight").value;
+
+    if (height === "" || weight === "") {
+        alert("กรุณากรอก Height และ Weight");
         return;
     }
 
+    calculateECMO();
+
     window.print();
+
 }
 
 document
