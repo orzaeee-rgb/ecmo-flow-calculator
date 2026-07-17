@@ -172,4 +172,121 @@ button:hover{
     size: A4 portrait;
     margin: 10mm;
   }
+
+}
+
+/* ตารางผลลัพธ์ ECMO */
+.result-table {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* หัวตาราง */
+.result-table th {
+  background: #0d6efd;
+  color: white;
+  font-weight: 700;
+  padding: 12px 8px;
+  border: 1px solid #d6dce5;
+}
+
+/* ช่องข้อมูล */
+.result-table td {
+  padding: 11px 8px;
+  border: 1px solid #d6dce5;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* สลับสีแต่ละแถว */
+.result-table tbody tr:nth-child(even) {
+  background: #f3f7fc;
+}
+
+/* เวลาเอาเมาส์ชี้ */
+.result-table tbody tr:hover {
+  background: #e5f0ff;
+}
+
+/* คอลัมน์เปอร์เซ็นต์ */
+.result-table th:first-child,
+.result-table td:first-child {
+  font-weight: 700;
+  background: #eef5ff;
+}
+
+/* หัวข้อผลลัพธ์ */
+#result h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 16px;
+}
+
+/* Height, Weight, BSA */
+#result p {
+  font-size: 16px;
+  margin: 8px 0;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .result-table {
+    font-size: 13px;
+  }
+
+  .result-table th,
+  .result-table td {
+    padding: 8px 4px;
+  }
+
+  #result p {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  .result-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    font-size: 12px !important;
+  }
+
+  .result-table th {
+    background: #e8eef7 !important;
+    color: black !important;
+    font-weight: bold !important;
+    border: 1px solid #555 !important;
+    padding: 7px !important;
+  }
+
+  .result-table td {
+    color: black !important;
+    border: 1px solid #555 !important;
+    padding: 7px !important;
+  }
+
+  .result-table tbody tr:nth-child(even) {
+    background: #f5f5f5 !important;
+  }
+
+  #result h2 {
+    color: black !important;
+    text-align: center !important;
+    font-size: 18px !important;
+  }
+
+  #result p {
+    color: black !important;
+    font-size: 13px !important;
+    text-align: center !important;
+  }
 }
