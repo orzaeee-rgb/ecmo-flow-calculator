@@ -25,16 +25,15 @@ function calculateECMO() {
         result += "<p><b>Height :</b> " + height + " cm</p>";
         result += "<p><b>Weight :</b> " + weight + " kg</p>";
         result += "<p><b>BSA :</b> " + bsa.toFixed(2) + " m²</p>";
-
-    result += `
-    <table class="result-table">
-    <tr>
+        result += `
+        <table class="result-table">
+        <tr>
         <th>% Flow</th>
         <th>CI 2.4</th>
         <th>CI 2.6</th>
         <th>CI 2.8</th>
-    </tr>
-    `;
+        </tr>
+        `;
 
     for (let percent = 10; percent <= 100; percent += 10) {
 
@@ -59,60 +58,23 @@ function calculateECMO() {
 
 }
  
-function exportExcel() {
+function printResult() {
+    const result = document.getElementById("result");
 
-    const height = document.getElementById("height").value;
-    const weight = document.getElementById("weight").value;
-
-    if (!height || !weight) {
-        alert("กรุณากรอกข้อมูลให้ถูกต้อง");
+    if (!result.innerHTML.trim()) {
+        alert("กรุณาคำนวณก่อนพิมพ์");
         return;
     }
 
-    const bsa = calculateBSA(Number(height), Number(weight));
-
-    const data = [
-        ["ECMO Flow Calculator"],
-        [],
-        ["Height (cm)", height],
-        ["Weight (kg)", weight],
-        ["BSA (m²)", bsa.toFixed(2)],
-        [],
-        ["% Flow","CI 2.4","CI 2.6","CI 2.8"]
-    ];
-
-    const cardiacIndexes = [2.4,2.6,2.8];
-
-    for(let percent=10; percent<=100; percent+=10){
-
-        let row = [percent + "%"];
-
-        cardiacIndexes.forEach(function(ci){
-            row.push(calculateFlow(bsa,ci,percent).toFixed(2));
-        });
-
-        data.push(row);
-    }
-
-    const worksheet = XLSX.utils.aoa_to_sheet(data);
-
-    const workbook = XLSX.utils.book_new();
-
-    XLSX.utils.book_append_sheet(workbook, worksheet, "ECMO");
-
-    XLSX.writeFile(workbook,"ECMO_Flow_Calculator.xlsx");
-
-} 
-
-function printResult() {
     window.print();
-} 
+}
+
+document
+    .getElementById("btnPrint")
+    .addEventListener("click", printResult);
 
 document.getElementById("btnCalculate")
     .addEventListener("click", calculateECMO);
-
-document.getElementById("btnExport")
-    .addEventListener("click", exportExcel);
 
 document.getElementById("btnPrint")
     .addEventListener("click", printResult);
