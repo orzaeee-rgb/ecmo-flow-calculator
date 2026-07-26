@@ -2,7 +2,7 @@
   "name": "ECMO Flow Calculator",
   "short_name": "ECMO Flow",
   "display": "standalone",
-  "start_url": ".",
+  "start_url": "./",
   "background_color": "#ffffff",
   "theme_color": "#0F4C81",
   "icons": [
