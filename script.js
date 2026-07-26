@@ -49,7 +49,34 @@ result += "<p><b>Weight:</b> " + weight + " kg</p>";
 result += "<p><b>BSA:</b> " + bsa.toFixed(2) + " m²</p>";
 result += `<p><b>ECMO Machine:</b> ${ecmoMachine}</p>`;
 
-    result += "</table>";
+result += `
+<table class="result-table">
+    <thead>
+        <tr>
+            <th>Flow %</th>
+            <th>CI 2.4</th>
+            <th>CI 2.6</th>
+            <th>CI 2.8</th>
+        </tr>
+    </thead>
+    <tbody>
+`;
+
+for (let percent = 10; percent <= 100; percent += 10) {
+    result += `
+        <tr>
+            <td>${percent}%</td>
+            <td>${calculateFlow(bsa, 2.4, percent).toFixed(2)}</td>
+            <td>${calculateFlow(bsa, 2.6, percent).toFixed(2)}</td>
+            <td>${calculateFlow(bsa, 2.8, percent).toFixed(2)}</td>
+        </tr>
+    `;
+}
+
+result += `
+    </tbody>
+</table>
+`;
 
     document.getElementById("result").innerHTML = result;
 
