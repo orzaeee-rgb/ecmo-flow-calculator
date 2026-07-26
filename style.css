@@ -151,18 +151,14 @@ button:hover{
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
-
     width: 80% !important;
     max-width: none !important;
-
     margin: 0 !important;
     padding: 0 !important;
-
     background: #ffffff !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-
     color: #111827 !important;
     font-family: Arial, "Noto Sans Thai", sans-serif !important;
   }
@@ -171,9 +167,7 @@ button:hover{
   #result h2 {
     margin: 0 0 8px !important;
     padding: 0 !important;
-
     border: none !important;
-
     color: #0d6efd !important;
     font-size: 22px !important;
     font-weight: bold !important;
@@ -185,18 +179,15 @@ button:hover{
   #result p {
   display: inline-block !important;
   width: 32% !important;
-
-  margin: 0 0.4% !important;
+  margin: 3mm 0.4% 2mm 0 !important;
   padding: 0 !important;
-
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-
   color: #111827 !important;
   font-size: 18px !important;
-  line-height: 1.4 !important;
+  line-height: 1.2 !important;
   text-align: center !important;
   box-sizing: border-box !important;
   }
@@ -205,12 +196,9 @@ button:hover{
   .result-table {
     width: 100% !important;
     margin: 4mm 0 0 !important;
-
     border-collapse: collapse !important;
     table-layout: fixed !important;
-
     font-size: 18px !important;
-
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
@@ -218,14 +206,11 @@ button:hover{
   /* หัวตาราง */
   .result-table th {
     padding: 2.5mm 2mm !important;
-
     background: #0d6efd !important;
     color: #ffffff !important;
-
     border: 1px solid #94a3b8 !important;
     font-weight: 700 !important;
     text-align: center !important;
-
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -233,10 +218,8 @@ button:hover{
   /* ช่องข้อมูล */
   .result-table td {
     padding: 2.2mm 2mm !important;
-
     color: #111827 !important;
     background: #ffffff !important;
-
     border: 1px solid #cbd5e1 !important;
     font-weight: 600 !important;
     text-align: center !important;
@@ -245,7 +228,6 @@ button:hover{
   /* แถวสลับสี */
   .result-table tbody tr:nth-child(even) td {
     background: #f1f5f9 !important;
-
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -255,7 +237,6 @@ button:hover{
     background: #e8f1ff !important;
     color: #0f3d78 !important;
     font-weight: 700 !important;
-
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -300,7 +281,6 @@ button:hover{
     padding: 0 16px;
     margin-top: 8px;
     margin-bottom: 20px;
-
     font-size: 16px;
     border: 1px solid #cccccc;
     border-radius: 12px;
