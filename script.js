@@ -38,9 +38,6 @@ function calculateECMO() {
     let result = `
   <div class="report-header">
     <h2>ECMO Flow Calculator</h2>
-    <div class="report-subtitle">
-      Body Surface Area × Cardiac Index
-    </div>
   </div>
 `;
 
