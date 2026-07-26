@@ -175,22 +175,29 @@ button:hover{
     text-align: center !important;
   }
 
-  /* Height, Weight และ BSA แบบไม่มีกรอบ */
-  #result p {
-  display: inline-block !important;
-  width: 32% !important;
-  margin: 0 0.4% 6px 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: #111827 !important;
-  font-size: 18px !important;
-  line-height: 1.2 !important;
-  text-align: center !important;
-  box-sizing: border-box !important;
-  }
+/* ข้อมูลผู้ป่วย */
+.report-info{
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    margin:0 0 6px 0 !important;
+    padding:0 !important;
+}
+
+.report-info div{
+    text-align:center !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:18px !important;
+    line-height:1.2 !important;
+}
+
+.machine-report{
+    margin:0 0 8px 0 !important;
+    padding:0 !important;
+    text-align:left !important;
+    font-size:18px !important;
+    line-height:1.2 !important;
+}
 
   /* ตาราง */
   .result-table {
@@ -293,3 +300,4 @@ button:hover{
     outline: none;
     border-color: #2478d4;
 }
+

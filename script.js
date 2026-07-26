@@ -41,10 +41,17 @@ function calculateECMO() {
   </div>
 `;
 
-result += "<p><b>Height:</b> " + height + " cm</p>";
-result += "<p><b>Weight:</b> " + weight + " kg</p>";
-result += "<p><b>BSA:</b> " + bsa.toFixed(2) + " m²</p>";
-result += `<p><b>ECMO Machine:</b> ${ecmoMachine}</p>`;
+result += `
+    <div class="report-info">
+        <div><b>Height:</b> ${height} cm</div>
+        <div><b>Weight:</b> ${weight} kg</div>
+        <div><b>BSA:</b> ${bsa.toFixed(2)} m²</div>
+    </div>
+
+    <div class="machine-report">
+        <b>ECMO Machine:</b> ${ecmoMachine}
+    </div>
+`;
 
 result += `
 <table class="result-table">
