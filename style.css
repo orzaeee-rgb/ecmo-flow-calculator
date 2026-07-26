@@ -199,6 +199,43 @@ button:hover{
     letter-spacing: 0.5px;
     text-align: center !important;
   }
+  .report-header {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.report-header h2 {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 0 5mm !important;
+    padding: 0 !important;
+    color: #0d6efd !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+.report-info {
+    display: grid !important;
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: center !important;
+    column-gap: 28mm !important;
+    row-gap: 2mm !important;
+    width: 100% !important;
+    margin: 0 0 4mm !important;
+    padding: 0 !important;
+}
+
+.report-info div {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+}
 
   /* ตาราง */
   .result-table {

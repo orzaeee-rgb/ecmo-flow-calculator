@@ -36,16 +36,16 @@ function calculateECMO() {
     const cardiacIndexes = [2.4, 2.6, 2.8];
 
     let result = `
-`;
+    <div class="report-header">
+        <h2>ECMO Flow Calculator</h2>
+    </div>
 
-result += `
-<div class="report-info">
-    <div><b>Height:</b> ${height} cm</div>
-    <div><b>Weight:</b> ${weight} kg</div>
-
-    <div><b>BSA:</b> ${bsa.toFixed(2)} m²</div>
-    <div><b>ECMO Machine:</b> ${ecmoMachine}</div>
-</div>
+    <div class="report-info">
+        <div><b>Height:</b> ${height} cm</div>
+        <div><b>Weight:</b> ${weight} kg</div>
+        <div><b>BSA:</b> ${bsa.toFixed(2)} m²</div>
+        <div><b>ECMO Machine:</b> ${ecmoMachine}</div>
+    </div>
 `;
 
 result += `
