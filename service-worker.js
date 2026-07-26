@@ -1,4 +1,4 @@
-const CACHE_NAME = "ecmo-cache-v6";
+const CACHE_NAME = "ecmo-cache-v7";
 
 const urlsToCache = [
     "./",
