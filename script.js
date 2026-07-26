@@ -18,18 +18,15 @@ function calculateECMO() {
 
     const height = parseFloat(document.getElementById("height").value);
     const weight = parseFloat(document.getElementById("weight").value);
-    const selectedMachine =
-    document.querySelector('input[name="ecmoMachine"]:checked');
-
-    if (!selectedMachine) {
-    alert("กรุณาเลือกเครื่อง ECMO");
-    return;
-    }
-
-    const ecmoMachine = selectedMachine.value;
+    const ecmoMachine = document.getElementById("ecmoMachine").value;
 
     if (height <= 0 || weight <= 0) {
         alert("กรุณากรอกข้อมูลให้ถูกต้อง");
+        return;
+    } 
+    
+    if (ecmoMachine === "") {
+        alert("กรุณาเลือกเครื่อง ECMO");
         return;
     }
 
@@ -62,22 +59,19 @@ function printResult() {
 
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
-    const selectedMachine =
-        document.querySelector('input[name="ecmoMachine"]:checked');
-
+    const ecmoMachine = document.getElementById("ecmoMachine").value;
 
     if (height === "" || weight === "") {
         alert("กรุณากรอก Height และ Weight");
         return;
     }
 
-    if (!selectedMachine) {
+    if (ecmoMachine === "") {
         alert("กรุณาเลือกเครื่อง ECMO");
         return;
     }
 
     calculateECMO();
-
     window.print();
 
 }
