@@ -179,7 +179,7 @@ button:hover{
   #result p {
   display: inline-block !important;
   width: 32% !important;
-  margin: 3mm 0.4% 2mm 0 !important;
+  margin: 0 0.4% 6px 0 !important;
   padding: 0 !important;
   background: transparent !important;
   border: none !important;
@@ -279,8 +279,8 @@ button:hover{
     width: 100%;
     height: 54px;
     padding: 0 16px;
-    margin-top: 8px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
     font-size: 16px;
     border: 1px solid #cccccc;
     border-radius: 12px;
