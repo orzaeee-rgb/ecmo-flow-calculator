@@ -1,3 +1,11 @@
+/*
+ * ECMO Flow Calculator
+ *
+ * Copyright (c) 2026 Paveeporn S.
+ *
+ * Licensed under the MIT License.
+ */
+
 function calculateBSA(height, weight) {
     return Math.sqrt((height * weight) / 3600);
 }
@@ -10,6 +18,15 @@ function calculateECMO() {
 
     const height = parseFloat(document.getElementById("height").value);
     const weight = parseFloat(document.getElementById("weight").value);
+    const selectedMachine =
+    document.querySelector('input[name="ecmoMachine"]:checked');
+
+    if (!selectedMachine) {
+    alert("กรุณาเลือกเครื่อง ECMO");
+    return;
+    }
+
+    const ecmoMachine = selectedMachine.value;
 
     if (height <= 0 || weight <= 0) {
         alert("กรุณากรอกข้อมูลให้ถูกต้อง");
@@ -21,36 +38,19 @@ function calculateECMO() {
 
     const cardiacIndexes = [2.4, 2.6, 2.8];
 
-    let result = "<h2>ECMO Flow Calculator</h2>";
-        result += "<p><b>Height :</b> " + height + " cm</p>";
-        result += "<p><b>Weight :</b> " + weight + " kg</p>";
-        result += "<p><b>BSA :</b> " + bsa.toFixed(2) + " m²</p>";
-        result += `
-        <table class="result-table">
-        <tr>
-        <th>% Flow</th>
-        <th>CI 2.4</th>
-        <th>CI 2.6</th>
-        <th>CI 2.8</th>
-        </tr>
-        `;
+    let result = `
+  <div class="report-header">
+    <h2>ECMO Flow Calculator</h2>
+    <div class="report-subtitle">
+      Body Surface Area × Cardiac Index
+    </div>
+  </div>
+`;
 
-    for (let percent = 10; percent <= 100; percent += 10) {
-
-        result += "<tr>";
-
-        result += "<td>" + percent + "%</td>";
-
-        cardiacIndexes.forEach(function(ci){
-
-            const flow = calculateFlow(bsa, ci, percent);
-
-            result += "<td>" + flow.toFixed(2) + "</td>";
-
-        });
-
-        result += "</tr>";
-    }
+result += "<p><b>Height:</b> " + height + " cm</p>";
+result += "<p><b>Weight:</b> " + weight + " kg</p>";
+result += "<p><b>BSA:</b> " + bsa.toFixed(2) + " m²</p>";
+result += `<p><b>ECMO Machine:</b> ${ecmoMachine}</p>`;
 
     result += "</table>";
 
@@ -62,9 +62,17 @@ function printResult() {
 
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
+    const selectedMachine =
+        document.querySelector('input[name="ecmoMachine"]:checked');
+
 
     if (height === "" || weight === "") {
         alert("กรุณากรอก Height และ Weight");
+        return;
+    }
+
+    if (!selectedMachine) {
+        alert("กรุณาเลือกเครื่อง ECMO");
         return;
     }
 
@@ -73,10 +81,6 @@ function printResult() {
     window.print();
 
 }
-
-document
-    .getElementById("btnPrint")
-    .addEventListener("click", printResult);
 
 document.getElementById("btnCalculate")
     .addEventListener("click", calculateECMO);
