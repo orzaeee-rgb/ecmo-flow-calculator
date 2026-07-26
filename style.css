@@ -124,6 +124,43 @@ button:hover{
     padding:20px;
 
 }
+
+.report-header h2{
+
+    text-align:center;
+    color:#1565C0;
+    margin-bottom:18px;
+
+}
+
+.report-info{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:12px;
+
+}
+
+.report-info div{
+
+    text-align:center;
+    font-size:17px;
+
+}
+
+.machine-report{
+
+    font-size:17px;
+    margin-bottom:18px;
+
+}
+
+.machine-report b{
+
+    margin-right:6px;
+
+}
 }
 
 @media print {
@@ -174,30 +211,6 @@ button:hover{
     letter-spacing: 0.5px;
     text-align: center !important;
   }
-
-/* ข้อมูลผู้ป่วย */
-.report-info{
-    display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    margin:0 0 6px 0 !important;
-    padding:0 !important;
-}
-
-.report-info div{
-    text-align:center !important;
-    margin:0 !important;
-    padding:0 !important;
-    font-size:18px !important;
-    line-height:1.2 !important;
-}
-
-.machine-report{
-    margin:0 0 8px 0 !important;
-    padding:0 !important;
-    text-align:left !important;
-    font-size:18px !important;
-    line-height:1.2 !important;
-}
 
   /* ตาราง */
   .result-table {
