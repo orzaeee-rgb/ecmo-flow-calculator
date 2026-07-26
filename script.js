@@ -33,12 +33,7 @@ function calculateECMO() {
     // Mosteller BSA formula
     const bsa = calculateBSA(height, weight);
 
-    saveHistory(
-    height,
-    weight,
-    bsa,
-    ecmoMachine
-    );
+    saveHistory(height, weight, bsa, ecmoMachine);
 
     const cardiacIndexes = [2.4, 2.6, 2.8];
 
@@ -121,17 +116,11 @@ function saveHistory(height, weight, bsa, machine){
         JSON.parse(localStorage.getItem("ecmoHistory")) || [];
 
     history.push({
-
         datetime: new Date().toLocaleString(),
-
         height: height,
-
         weight: weight,
-
         bsa: bsa.toFixed(2),
-
         machine: machine
-
     });
 
     localStorage.setItem(
