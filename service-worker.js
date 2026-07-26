@@ -1,4 +1,4 @@
-const CACHE_NAME = "ecmo-flow-v8";
+const CACHE_NAME = "ecmo-flow-v9";
 
 const urlsToCache = [
     "./",
@@ -6,6 +6,8 @@ const urlsToCache = [
     "./style.css",
     "./script.js",
     "./manifest.json",
+    "./icons/icon-192.png",
+    "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", event => {
