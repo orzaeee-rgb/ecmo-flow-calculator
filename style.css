@@ -195,7 +195,7 @@ button:hover{
   .report-header h2,
   #result h2 {
     display: block !important;
-    margin: 0 0 2mm !important;
+    margin: 5mm 0 2mm !important;
     padding: 0 !important;
     border: none !important;
     color: #0d6efd !important;
@@ -233,7 +233,7 @@ button:hover{
     display: block !important;
     margin: 0 0 0.5mm !important;
     color: #374151 !important;
-    font-size: 8px !important;
+    font-size: 16px !important;
     line-height: 1.05 !important;
   }
 
@@ -241,7 +241,7 @@ button:hover{
     display: block !important;
     margin: 0 !important;
     color: #0d6efd !important;
-    font-size: 11px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
     line-height: 1.05 !important;
   }
@@ -321,9 +321,8 @@ button:hover{
 .footer{
     margin-top:40px;
     padding:15px;
-
     text-align:center;
-    font-size:13px;
+    font-size:16px;
     color:#666;
 }
 #ecmoMachine {
@@ -366,7 +365,7 @@ button:hover{
 
     display:block;
     color:#777;
-    font-size:14px;
+    font-size:16px;
     margin-bottom:5px;
 
 }
