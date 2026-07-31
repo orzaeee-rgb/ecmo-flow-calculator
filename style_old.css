@@ -116,7 +116,7 @@ button:hover{
 
 }
 
-@media screen and (max-width:600px){
+@media(max-width:600px){
 
 .container{
 
@@ -153,10 +153,12 @@ button:hover{
 
 @media print {
 
+  /* ซ่อนหน้าเว็บทั้งหมด */
   body * {
     visibility: hidden !important;
   }
 
+  /* แสดงเฉพาะผลลัพธ์ */
   #result,
   #result * {
     visibility: visible !important;
@@ -169,11 +171,12 @@ button:hover{
     background: #ffffff !important;
   }
 
+  /* กล่องรายงาน */
   #result {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
-    width: 100% !important;
+    width: 80% !important;
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -185,79 +188,70 @@ button:hover{
     font-family: Arial, "Noto Sans Thai", sans-serif !important;
   }
 
-  .report-header {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .report-header h2,
+  /* ชื่อรายงาน */
   #result h2 {
-    display: block !important;
-    margin: 0 0 2mm !important;
+    margin: 0 0 8px !important;
     padding: 0 !important;
     border: none !important;
     color: #0d6efd !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    line-height: 1.05 !important;
-    letter-spacing: 0 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    letter-spacing: 0.5px;
     text-align: center !important;
   }
-
-  .report-cards {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 2mm !important;
+  .report-header {
+    display: block !important;
+    visibility: visible !important;
     width: 100% !important;
-    margin: 0 0 3mm !important;
+    margin: 0 !important;
     padding: 0 !important;
-  }
+}
 
-  .info-card {
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 1.5mm 2mm !important;
-    background: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-    border-radius: 5px !important;
-    box-shadow: none !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-
-  .info-card span {
+.report-header h2 {
     display: block !important;
-    margin: 0 0 0.5mm !important;
-    color: #374151 !important;
-    font-size: 8px !important;
-    line-height: 1.05 !important;
-  }
-
-  .info-card strong {
-    display: block !important;
-    margin: 0 !important;
+    visibility: visible !important;
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
     color: #0d6efd !important;
-    font-size: 11px !important;
+    font-size: 18px !important;
     font-weight: 700 !important;
-    line-height: 1.05 !important;
-  }
+    text-align: center !important;
+    line-height:1.1 !important;
+}
 
+.report-info {
+    display: grid !important;
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: center !important;
+    column-gap: 28mm !important;
+    row-gap: 2mm !important;
+    width: 100% !important;
+    margin: 0 0 4mm !important;
+    padding: 0 !important;
+}
+
+.report-info div {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+}
+
+  /* ตาราง */
   .result-table {
     width: 100% !important;
-    margin: 0 !important;
+    margin: 4mm 0 0 !important;
     border-collapse: collapse !important;
     table-layout: fixed !important;
-    font-size: 9px !important;
+    font-size: 18px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 
+  /* หัวตาราง */
   .result-table th {
-    padding: 1.3mm 1mm !important;
+    padding: 2.5mm 2mm !important;
     background: #0d6efd !important;
     color: #ffffff !important;
     border: 1px solid #94a3b8 !important;
@@ -267,8 +261,9 @@ button:hover{
     print-color-adjust: exact !important;
   }
 
+  /* ช่องข้อมูล */
   .result-table td {
-    padding: 1.1mm 1mm !important;
+    padding: 2.2mm 2mm !important;
     color: #111827 !important;
     background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
@@ -276,12 +271,14 @@ button:hover{
     text-align: center !important;
   }
 
+  /* แถวสลับสี */
   .result-table tbody tr:nth-child(even) td {
     background: #f1f5f9 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
+  /* คอลัมน์เปอร์เซ็นต์ */
   .result-table td:first-child {
     background: #e8f1ff !important;
     color: #0f3d78 !important;
@@ -296,12 +293,12 @@ button:hover{
   }
 
   @page {
-    size: A4 portrait;
-    margin: 5mm 8mm;
+    size: A4 landscape;
+    margin: 8mm 8mm;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .result-table {
     font-size: 18px !important;
   }
@@ -378,7 +375,7 @@ button:hover{
 
 }
 
-@media screen and (max-width:768px){
+@media (max-width:768px){
 
     .report-cards{
 
