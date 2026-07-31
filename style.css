@@ -251,16 +251,17 @@ button:hover{
     margin: 0 !important;
     border-collapse: collapse !important;
     table-layout: fixed !important;
-    font-size: 9px !important;
+    font-size: 13px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 
   .result-table th {
-    padding: 1.3mm 1mm !important;
+    padding: 2mm 1.5mm !important;
     background: #0d6efd !important;
     color: #ffffff !important;
     border: 1px solid #94a3b8 !important;
+    font-size: 13px !important;
     font-weight: 700 !important;
     text-align: center !important;
     -webkit-print-color-adjust: exact !important;
@@ -268,10 +269,11 @@ button:hover{
   }
 
   .result-table td {
-    padding: 1.1mm 1mm !important;
+    padding: 1.7mm 1.5mm !important;
     color: #111827 !important;
     background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
+    font-size: 13px !important;
     font-weight: 600 !important;
     text-align: center !important;
   }
@@ -296,7 +298,7 @@ button:hover{
   }
 
   @page {
-    size: A4 portrait;
+    size: A4 landscape;
     margin: 5mm 8mm;
   }
 }
