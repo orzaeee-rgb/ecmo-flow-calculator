@@ -42,12 +42,29 @@ function calculateECMO() {
         <h2>ECMO Flow Calculator</h2>
     </div>
 
-    <div class="report-info">
-        <div><b>Height:</b> ${height} cm</div>
-        <div><b>Weight:</b> ${weight} kg</div>
-        <div><b>BSA:</b> ${bsa.toFixed(2)} m²</div>
-        <div><b>ECMO Machine:</b> ${ecmoMachine}</div>
+    <div class="report-cards">
+
+    <div class="info-card">
+        <span>Height</span>
+        <strong>${height} cm</strong>
     </div>
+
+    <div class="info-card">
+        <span>Weight</span>
+        <strong>${weight} kg</strong>
+    </div>
+
+    <div class="info-card">
+        <span>BSA</span>
+        <strong>${bsa.toFixed(2)} m²</strong>
+    </div>
+
+    <div class="info-card">
+        <span>ECMO Machine</span>
+        <strong>${ecmoMachine}</strong>
+    </div>
+
+</div>
 `;
 
 result += `

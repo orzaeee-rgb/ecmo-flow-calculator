@@ -339,3 +339,52 @@ button:hover{
     border-color: #2478d4;
 }
 
+/* ===== Result Cards ===== */
+
+.report-cards{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:25px 0;
+
+}
+
+.info-card{
+
+    background:white;
+    border-radius:16px;
+    padding:18px;
+    border:1px solid #d9e3f0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    text-align:center;
+
+}
+
+.info-card span{
+
+    display:block;
+    color:#777;
+    font-size:14px;
+    margin-bottom:8px;
+
+}
+
+.info-card strong{
+
+    display:block;
+    color:#1565c0;
+    font-size:22px;
+    font-weight:700;
+
+}
+
+@media (max-width:768px){
+
+    .report-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
