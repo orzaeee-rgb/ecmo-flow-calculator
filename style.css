@@ -199,7 +199,7 @@ button:hover{
     padding: 0 !important;
     border: none !important;
     color: #0d6efd !important;
-    font-size: 14px !important;
+    font-size: 20px !important;
     font-weight: 700 !important;
     line-height: 1.05 !important;
     letter-spacing: 0 !important;
@@ -251,7 +251,7 @@ button:hover{
     margin: 0 !important;
     border-collapse: collapse !important;
     table-layout: fixed !important;
-    font-size: 13px !important;
+    font-size: 16px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
@@ -261,7 +261,7 @@ button:hover{
     background: #0d6efd !important;
     color: #ffffff !important;
     border: 1px solid #94a3b8 !important;
-    font-size: 13px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
     text-align: center !important;
     -webkit-print-color-adjust: exact !important;
@@ -273,7 +273,7 @@ button:hover{
     color: #111827 !important;
     background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
-    font-size: 13px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
     text-align: center !important;
   }
