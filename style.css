@@ -293,7 +293,7 @@ button:hover{
 
   @page {
     size: A4 landscape;
-    margin: 5mm;
+    margin: 5mm 0 5mm 0;
   }
 }
 
