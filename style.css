@@ -128,7 +128,7 @@ button:hover{
 }
 
 .report-header h2 {
-    margin: 0 0 18px;
+    margin: 10px;
     color: #1565c0;
     text-align: center;
     font-size: 24px;
@@ -234,7 +234,7 @@ button:hover{
     display: block !important;
     margin: 0 0 0.5mm !important;
     color: #374151 !important;
-    font-size: 16px !important;
+    font-size: 12px !important;
     line-height: 1.05 !important;
   }
 
@@ -242,9 +242,9 @@ button:hover{
     display: block !important;
     margin: 0 !important;
     color: #0d6efd !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    line-height: 1.05 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
   }
 
   .result-table {
