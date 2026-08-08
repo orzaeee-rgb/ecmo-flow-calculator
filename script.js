@@ -1,5 +1,5 @@
 /*
- * ECMO Flow Calculator
+ * Goal ECMO Flow Calculator
  *
  * Copyright (c) 2026 Paveeporn S.
  *
@@ -39,7 +39,7 @@ function calculateECMO() {
 
     let result = `
     <div class="report-header">
-        <h2>ECMO Flow Calculator</h2>
+        <h2>Goal ECMO Flow Calculator</h2>
     </div>
 
     <div class="report-cards">

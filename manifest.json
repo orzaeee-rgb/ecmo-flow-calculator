@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "ECMO Flow Calculator",
-  "short_name": "ECMO Flow",
+  "name": "Goal ECMO Flow Calculator",
+  "short_name": "Goal ECMO Flow",
   "display": "standalone",
   "start_url": "./index.html",
   "scope": "./",

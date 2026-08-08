@@ -1,6 +1,6 @@
-# ECMO Flow Calculator
+# Goal ECMO Flow Calculator
 
-ECMO Flow Calculator based on Body Surface Area (Mosteller Formula).
+Goal ECMO Flow Calculator based on Body Surface Area (Mosteller Formula).
 
 ## Features
 
@@ -17,4 +17,4 @@ Copyright (c) 2026 Paveeporn S.
 
 ## Disclaimer
 
-This ECMO Flow Calculator is intended for educational, research, and clinical support purposes only. It is not intended to replace professional medical judgment or institutional protocols. Users are responsible for verifying all calculations before clinical use.
+This Goal ECMO Flow Calculator is intended for educational, research, and clinical support purposes only. It is not intended to replace professional medical judgment or institutional protocols. Users are responsible for verifying all calculations before clinical use.

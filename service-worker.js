@@ -1,4 +1,4 @@
-const CACHE_NAME = "ecmo-flow-v20";
+const CACHE_NAME = "goal-ecmo-flow-v1";
 
 const urlsToCache = [
     "./",
